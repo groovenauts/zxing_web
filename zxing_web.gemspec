@@ -12,7 +12,7 @@ Gem::Specification.new do |spec|
   spec.platform      = 'java'
   spec.summary       = %q{Provides APIs to decode barcode image}
   spec.description   = %q{Provides APIs to decode barcode image}
-  spec.homepage      = ""
+  spec.homepage      = "https://github.com/groovenauts/zxing_web"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
