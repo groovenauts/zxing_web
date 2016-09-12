@@ -1,3 +1,5 @@
 #!/usr/bin/env ruby
 
-require "zxing_web/sinatra"
+require "zxing_web/app"
+
+ZxingWeb::App.run!

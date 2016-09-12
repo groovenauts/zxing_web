@@ -1,5 +1,5 @@
 require "zxing_web/version"
 
 module ZxingWeb
-  autoload :Sinatra, 'zxing_web/sinatra'
+  autoload :App, 'zxing_web/app'
 end
