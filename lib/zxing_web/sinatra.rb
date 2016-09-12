@@ -1,7 +1,12 @@
 # coding: utf-8
-require 'sinatra'
+require 'zxing_web'
+
+require 'sinatra/base'
 require 'zxing'
 require 'json'
+
+module ZxingWeb
+  class App < Sinatra::Base
 
 get '/' do
   "working!"
@@ -19,4 +24,7 @@ post '/decode' do
     }
   end
   JSON.generate(results)
+end
+
+  end
 end
