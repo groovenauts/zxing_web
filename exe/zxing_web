@@ -1,3 +1,3 @@
 #!/usr/bin/env ruby
 
-require "zxing_web"
+require "zxing_web/sinatra"
