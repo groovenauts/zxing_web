@@ -3,9 +3,6 @@ require 'sinatra'
 require 'zxing'
 require 'json'
 
-def decode_files(files)
-end
-
 get '/' do
   "working!"
 end
