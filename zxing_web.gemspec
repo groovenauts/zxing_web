@@ -9,6 +9,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ["akm"]
   spec.email         = ["akm2000@gmail.com"]
 
+  spec.platform      = 'java'
   spec.summary       = %q{Provides APIs to decode barcode image}
   spec.description   = %q{Provides APIs to decode barcode image}
   spec.homepage      = ""
@@ -18,6 +19,8 @@ Gem::Specification.new do |spec|
   spec.bindir        = "exe"
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
+
+  spec.add_runtime_dependency "zxing"
 
   spec.add_development_dependency "bundler", "~> 1.12"
   spec.add_development_dependency "rake", "~> 10.0"
