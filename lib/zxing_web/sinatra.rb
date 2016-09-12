@@ -1,6 +1,7 @@
 # coding: utf-8
 require 'sinatra'
 require 'zxing'
+require 'json'
 
 get '/' do
   "working!"
@@ -10,7 +11,10 @@ post '/decode' do
   files = params[:file]
   files = [files] unless files.is_a?(Array)
   results = files.map do |f|
-    ZXing.decode(f[:tempfile])
+    {
+      :filename => f[:filename],
+      :result => ZXing.decode(f[:tempfile])
+    }
   end
-  results.join("\n")
+  JSON.generate(results)
 end
